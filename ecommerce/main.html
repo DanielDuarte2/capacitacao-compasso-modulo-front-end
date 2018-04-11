@@ -12,22 +12,27 @@
     <body>
         <header class="main-header">
             <div>
-                <nav class="menu-top">
-                    <ul class="container-top">
-                        <li class="item">
-                            <a href="#">minha conta</a>
-                        </li>
-                        <li class="item">
-                        <a href="#">login</a>
-                    </ul>
-                </nav>
+                <div class="aligned-elements">
+                    <nav class="menu-top">
+                        <ul class="container-top">
+                            <li class="item">
+                                <a href="#">minha conta</a>
+                            </li>
+                            <li class="item">
+                            <a href="#">login</a>
+                        </ul>
+                    </nav>
 
-                    <figure class="container-img">
-                        <img src="assets/img/logo.jpg">
-                    </figure>
-
-                <div>
-                    <input type="text" id="search" placeholder="Pesquisar">
+                    <div class="container-logoinput">
+                        <div class="container-logo">
+                            <figure class="container-img">
+                                <img src="assets/img/logo.jpg">
+                            </figure>
+                        </div>
+                    </div>
+                        <div class="container-input">
+                            <input type="text" id="search" placeholder="Pesquisar">
+                        </div>
                 </div>
 
                 <nav class="menu">
@@ -65,60 +70,82 @@
         </header>
 
         <div class="content">
-            <section class="main-deal">
-                <figure class="container-dealimg">
-                    <a href="#"><img src="assets/img/122701411G1.png"></a>
-                </figure>   
-
-                <h1>Lorem Ipsum</h1>
-                <p>Mussum ipsum....</p>
-                
-            </section>
+                <section class="main-deal">
+                    <div class="container-dealimg">
+                        <figure class="dealimg">
+                            <a href="#"><img src="assets/img/122701411G1.png"></a>
+                        </figure>   
+                    </div>
+                    <div class="container-dealdescription">
+                        <div class="deal-name">
+                                <span>Lorem Ipsum</span>
+                        </div>
+                        <div class="deal-description">
+                                <span>Mussum Ipsum,  cacilds vidis litro abertis. Aenean aliquam molestie leo, vitae iaculis nisl. Si num tem leite então bota uma pinga aí cumpadi! Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.</span>
+                        </div>
+                        <div class="deal-more">
+                            <br><span><a href="#">VER MAIS</a> </span>
+                        </div>
+                    </div>
+                </section>
 
             <section class="main-arrivals">
-                <h2>Novidades</h2>
+                <div class="main-title">
+                    <h2>Novidades</h2>
+                </div>
 
                 <div class="main-prodlist">
                     <a href="#"><img src="assets/img/125768056G1.png"></a>
-                    <h3>Produto</h3>
-                    <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    <div class="arrival-description">
+                        <h3>Produto</h3>
+                        <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    </div>
                 </div>
 
                 <div class="main-prodlist">
                     <a href="#"><img src="assets/img/132474081G1.png"></a>
-                    <h3>Produto</h3>
-                    <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    <div class="arrival-description">
+                        <h3>Produto</h3>
+                        <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    </div>
                 </div>
 
                 <div class="main-prodlist">
                     <a href="#"><img src="assets/img/126474851G1.jpg"></a>
-                    <h3>Produto</h3>
-                    <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    <div class="arrival-description">
+                            <h3>Produto</h3>
+                            <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    </div>
                 </div>
 
             </section>
 
             <section class="main-popular">
-                <h2>Produtos mais vendidos</h2>
+                <div class="main-title">
+                    <h2>Produtos mais vendidos</h2> 
+                </div>
                 
                 <div class="main-prodlist">
                     <a href="#"><img src="assets/img/132569266G1.png"></a>
-                    <h3>Produto</h3>
-                    <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    <div class="arrival-description">
+                            <h3>Produto</h3>
+                            <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    </div>
                 </div>
-
                 <div class="main-prodlist">
                     <a href="#"><img src="assets/img/132569944G1.png"></a>
-                    <h3>Produto</h3>
-                    <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    <div class="arrival-description">
+                            <h3>Produto</h3>
+                            <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    </div>
                 </div>
-
                 <div class="main-prodlist">
                     <a href="#"><img src="assets/img/18250963G1.jpg"></a>
-                    <h3>Produto</h3>
-                    <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>  
+                    <div class="arrival-description">
+                            <h3>Produto</h3>
+                            <p>R$ 100,00 <br>10x de R$ 10,00 sem juros</p>
+                    </div>
                 </div>
-
             </section>
         </div>
 
@@ -177,7 +204,7 @@
                         <li>
                             <p class="menu-title">Siga a Americanas</p>
                         </li>
-                        <ul>
+                        <ul class="main-follow">
                             <li>
                                 <a href="#"><img src="assets/img/fbicon.png"></a>
                             </li>
@@ -192,8 +219,11 @@
 
 
             </div>
-
-        Todos os direitos reservados.</footer>
+            
+        <div class="main-rights">
+            <span>Todos os direitos reservados.</span>
+        </div>
+    </footer>
         
     </body>
 
