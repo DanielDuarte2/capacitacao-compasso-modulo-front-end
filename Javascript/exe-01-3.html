@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="text" id="txt_operando1">
+        <input type="text" id="txt_operando2">
+        <a href="#" id="link_soma">Somar</a>
+        <input type="text" id="txt_resultado">
+
+        <script>
+        var $operando_1 = document.getElementById("txt_operando1");
+        var $operando_2 = document.getElementById("txt_operando2");
+        var $output_soma = document.getElementById("txt_resultado");
+        var $link_soma = document.getElementById("link_soma");
+        var $resultado_soma;
+
+        $link_soma.onclick = function(){
+            $resultado_soma = +$operando_1.value + +$operando_2.value;
+            $output_soma.value = $resultado_soma;
+        };
+
+        
+        </script>
+    
+</body>
+</html>
