@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>#container-resultado{display:none; }</style>
+</head>
+<body>
+    <form action="" class="js-teste" id="frm_busca">
+        <input type="search" id="campo-busca">
+    </form>
+
+    <div id="container-resultado">
+        <h2>Resultado de busca</h2>
+        <div id="sugestoes-produtos"></div>
+        <div id="resultado-busca"></div>                         
+    </div>
+
+    <script>
+        "use strict"; //obriga inicializar todas as variaveis
+        var $debug = true;
+
+        var $campo_busca = document.getElementById('campo-busca');
+        var $container_resultados = document.getElementById('container-resultado');
+        var $sugestoes_produtos = document.getElementById('sugestoes-produtos');
+        var $resultado_busca = document.getElementById('resultado-busca');
+
+        //array de sugestoes de produtos
+        var $ar_sugestoes_produtos = [
+            "Detergentes",
+            "Café",
+            "Erva",
+            "Cerveja"
+        ];
+
+        var $ar_resultado_busca = [
+            {
+                "nome" : "Computador Dell",
+                "descricao" : "texto texto texto texto",
+                "img" : "https://www.hardware.com.br/static/20151125/dell.jpg.499x334.auto.jpg",
+                "link" : "http://compasso.com.br",
+                "preco" : 10.5
+            },
+            {
+                "nome" : "Notebook HP",
+                "descricao" : "outro texto",
+                "img" : "http://www.cellshop.com/v2/587662-large_default/notebook-hp-15-bs194od-i7-1-8ghz-12gb-1tb-dvd-rw-15-6--hd-w10.jpg",
+                "link" : "http://compasso.com.br",
+                "preco" : 29.5
+            },
+            {
+                "nome" : "Asus",
+                "descricao" : "bla bla bla",
+                "img" : "http://static.wmobjects.com.br/imgres/arquivos/ids/10053047-1000-1000/notebook-asus-i7-14--6gb-1tb-preto-com-windows-8-s46cb-wx228h.jpg",
+                "link" : "http://compasso.com.br",
+                "preco" : 19.5
+            }
+        ];
+
+        cl($ar_resultado_busca);
+
+        function cl($msg){
+            if($debug) console.log($msg);
+        };
+
+        function renderizaSugestoes(){
+            var $retorno = "";
+
+            for(var $i in $ar_sugestoes_produtos){
+                //cl($ar_sugestoes_produtos[$i]);
+
+                $retorno += "<p>"+$ar_sugestoes_produtos[$i]+"</p>";
+            };
+            $sugestoes_produtos.innerHTML = $retorno;
+        };
+
+        function renderizaResultadoBusca(){
+            var $retorno = "";
+
+            for(var $i in $ar_resultado_busca){
+                $retorno += "<div>" +
+                            "<h3>" +$ar_resultado_busca[$i].nome+"</h3>" +
+                            "<p>" +$ar_resultado_busca[$i].descricao+ "</p>" +
+                            "<img height='250' width='250' src='" + $ar_resultado_busca[$i].img + "'>" +
+                            "<a href='"+ $ar_resultado_busca[$i].link + "'><br>Veja mais</a>" + 
+                            "<p>" +$ar_resultado_busca[$i].preco+ "</p>" +
+                            "</div>";
+            }
+
+            $resultado_busca.innerHTML = $retorno;
+        };        
+
+        $campo_busca.onfocus = function(){
+            cl('Entrou no campo');
+            $container_resultados.style.display = "block";
+
+            if(this.value.length === 0){
+                cl('exibe sugestoes esconde lista');
+                $sugestoes_produtos.style.display = "block";
+                $resultado_busca.style.display = "none";
+            } else {
+                cl('exibe lista esconde sugestoes');
+                $sugestoes_produtos.style.display = "none";
+                $resultado_busca.style.display = "block";
+            }
+        };
+
+        $campo_busca.onblur = function(){
+            cl('Saiu do campo');
+            if(this.value.length === 0)
+                $container_resultados.style.display = "none";
+        };
+
+        renderizaSugestoes(); 
+        renderizaResultadoBusca();  
+    </script>
+</body>
+</html>
