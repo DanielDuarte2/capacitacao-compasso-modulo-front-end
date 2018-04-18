@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<body>
+
+        <div class="container-imgs">
+                <div>
+                    <img src="assets/img/pexels-photo.jpg" alt="">
+                </div>
+                <div>
+                    <img src="assets/img/pexels-photo-310419.jpg" alt="">
+                </div>
+                <div>
+                    <img src="assets/img/pexels-photo-383646.jpg" alt="">
+                </div>
+        </div>
+
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-migrate-1.4.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+
+    <script>
+        
+        $('.container-imgs').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            arrows:true
+        });
+
+    </script>
+    
+</body>
+</html>

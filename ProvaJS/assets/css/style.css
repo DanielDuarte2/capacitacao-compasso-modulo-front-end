@@ -68,6 +68,18 @@ body{
     padding-top: 6%;
 }
 
+.main-header .container-input #container-resultado {
+    margin-left: 27px;
+    width: 43%    ;
+    font-size: 15px;
+    padding: 10px;
+    border: 3px solid #000;
+    background: white;
+}
+
+.main-header .container-input #container-resultado p{
+    display: inline;
+}
 .main-header .container-logo {
     display: inline-block;
 }
@@ -124,24 +136,41 @@ body{
 
 .content .main-deal {
     display: inline-block;
+    width:100%;
+
+    
 }
 
 /* Oferta principal */
 
 .content .main-deal .container-dealimg {
-    display: inline-block;
-    float:left;
+    /*display: inline-block;*/    
+    width:400px;
+    margin-left:30%;
 }
+
+
+
+.slick-prev {
+    margin-left: 40px; z-index:3; 
+    background-color: black;
+  }
+  
+  .slick-next {
+    margin-right: 40px; z-index:3; 
+    background-color: black;
+  }
 
 .content .main-deal .container-dealdescription {
     display: inline-block;
-    width:60%;
+    width:0%;
     padding: 2%;
     vertical-align: top;
 }
 
+
 .content .main-deal .container-dealimg .dealimg img{
-    width: 350px;
+    width: 100%;
     height: 350px;
     border: 2px solid #000;
     

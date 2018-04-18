@@ -101,10 +101,13 @@
                 cl('exibe sugestoes esconde lista');
                 $sugestoes_produtos.style.display = "block";
                 $resultado_busca.style.display = "none";
+                renderizaSugestoes(); 
             } else {
                 cl('exibe lista esconde sugestoes');
-                $sugestoes_produtos.style.display = "none";
+                $sugestoes_produtos.style.display = "block";
                 $resultado_busca.style.display = "block";
+                renderizaResultadoBusca();
+                $sugestoes_produtos.style.display = "none";
             }
         };
 
@@ -114,8 +117,8 @@
                 $container_resultados.style.display = "none";
         };
 
-        renderizaSugestoes(); 
-        renderizaResultadoBusca();  
+        
+          
     </script>
 </body>
 </html>
